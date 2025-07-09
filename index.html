@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA ToDoリスト</title>
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color for browsers -->
+    <meta name="theme-color" content="#4A90E2">
+
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-2xl">
+        <header class="text-center mb-6">
+            <h1 class="text-4xl font-bold text-gray-800 flex items-center justify-center">
+                <img src="icon.svg" alt="ToDo Icon" class="w-10 h-10 mr-3">
+                <span>ToDoリスト</span>
+            </h1>
+            <p class="text-gray-500 mt-2">PWAで作成したシンプルなタスク管理アプリ</p>
+        </header>
+
+        <main class="bg-white rounded-lg shadow-lg p-6">
+            <!-- Form to add new tasks -->
+            <form id="task-form" class="flex flex-col sm:flex-row gap-3 mb-6">
+                <input type="text" id="task-input" placeholder="新しいタスクを入力..." class="flex-grow p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    追加
+                </button>
+            </form>
+
+            <!-- List of tasks -->
+            <div id="task-list">
+                <!-- Tasks will be dynamically inserted here -->
+            </div>
+
+            <!-- Message for empty list -->
+            <div id="empty-message" class="text-center text-gray-400 py-8 hidden">
+                <p class="text-lg">タスクはありません。</p>
+                <p>最初のタスクを追加してみましょう！</p>
+            </div>
+        </main>
+
+        <footer class="text-center text-gray-400 mt-8 text-sm">
+            <p>&copy; 2025 PWA ToDo App</p>
+        </footer>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
