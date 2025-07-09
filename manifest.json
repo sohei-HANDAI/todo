@@ -1,0 +1,28 @@
+{
+  "name": "PWA ToDoリスト",
+  "short_name": "ToDoリスト",
+  "description": "PWA技術で作られたシンプルなToDoリストアプリケーション",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#4A90E2",
+  "scope": "/"
+}
